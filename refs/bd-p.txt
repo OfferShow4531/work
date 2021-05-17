@@ -1,0 +1,32 @@
+idodcuser
+nC9LH6cZ
+
+SSO
+host - 192.168.12.104
+db - KazNITU
+login - datacenter-ro
+pass - GN9cWuM7
+
+idoadmin / 6dfRthN7
+
+Postgres
+host - 192.168.12.42
+DB - politeh
+username - politeh_backend
+pass - J2b_jLjykv4UCNg7P
+
+MySQL
+host - pma.satbayev.university
+db - official
+login: DC_acc_RO
+pass: VBNV7a9ycX1xI8n8
+
+https://scientific-activity.satbayev.university/ui
+Логин: dc@satbayev.university
+Пароль: DC2030dc!
+
+HR
+192.168.12.81
+kaznitu_hr
+t.mukhit 
+8VxjXa7z

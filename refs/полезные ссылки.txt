@@ -1,0 +1,12 @@
+[13:13, 04.12.2020] Ильяс: 1) PL/PgSQL на русском теория и практика
+https://www.youtube.com/watch?v=8uHePp-qFNE&list=PLaFqU3KCWw6LNR1IZ814whJe89J1tRQ3t
+
+Материалы:
+1)https://postgrespro.ru/education/courses/DEV1
+
+Проблемы:
+1) Кодировка
+https://iu5bmstu.ru/index.php/PostgreSQL_-_%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D1%86%D0%B0_%D0%B2_psql_%D0%BF%D0%BE%D0%B4_Windows
+
+Задания:
+https://pgexercises.com/questions/basic/
