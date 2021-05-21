@@ -539,11 +539,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Memory group by 3</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Select values</from>
       <to>Row normaliser</to>
       <enabled>Y</enabled>
@@ -581,6 +576,16 @@
     <hop>
       <from>Select values 2 2</from>
       <to>Table output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Memory group by 3</from>
+      <to>f_author_id &lt;&gt; 90400</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_author_id &lt;&gt; 90400</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1575,7 +1580,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
+      <xloc>1024</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1673,7 +1678,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>1104</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1713,7 +1718,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1136</xloc>
+      <xloc>1232</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1766,7 +1771,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1248</xloc>
+      <xloc>1312</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1799,7 +1804,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1344</xloc>
+      <xloc>1408</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1834,7 +1839,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
+      <xloc>1584</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1865,7 +1870,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
+      <xloc>1488</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1933,7 +1938,7 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1744</xloc>
+      <xloc>1808</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2002,7 +2007,51 @@ FROM "public".tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1616</xloc>
+      <xloc>1680</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>f_author_id &lt;&gt; 90400</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to/>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>f_author_id</leftvalue>
+        <function>&lt;></function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>90400</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>####0;-####0</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>

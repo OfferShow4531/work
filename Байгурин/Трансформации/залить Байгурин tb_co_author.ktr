@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>залить Байгурин tb_treatise_author</name>
+    <name>залить Байгурин tb_co_author</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,17 +427,17 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2021/05/20 16:25:25.176</created_date>
+    <created_date>2021/05/21 12:34:58.830</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/05/20 16:25:25.176</modified_date>
+    <modified_date>2021/05/21 12:34:58.830</modified_date>
     <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
       <note>auid 56195375100, 57214647658 filter</note>
-      <xloc>176</xloc>
-      <yloc>288</yloc>
+      <xloc>463</xloc>
+      <yloc>318</yloc>
       <width>202</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -519,6 +519,11 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Sort rows 4</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>tb_treatise</from>
       <to>Sort rows 3</to>
       <enabled>Y</enabled>
@@ -529,8 +534,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>add_date</from>
-      <to>Add sequence</to>
+      <from>Merge join 2</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -539,8 +544,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join 2</from>
-      <to>Select values</to>
+      <from>add_date</from>
+      <to>Add sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Sort rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -554,11 +564,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows 4</from>
-      <to>Merge join</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows 2</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
@@ -569,13 +574,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2</from>
-      <to>Sort rows 5</to>
+      <from>Filter rows 3</from>
+      <to>Sort rows 6</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows 5</from>
-      <to>Memory group by 2</to>
+      <from>Select values 2</from>
+      <to>Sort rows 5</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -584,8 +589,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 3</from>
-      <to>Sort rows 6</to>
+      <from>Sort rows 5</from>
+      <to>Memory group by 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -594,12 +599,37 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Sort rows</to>
+      <from>Table input</from>
+      <to>Sort rows 7</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Memory group by</from>
+      <to>Sort rows 8</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 8</from>
+      <to>Merge join 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 7</from>
+      <to>Merge join 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join 3</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
+      <to>Memory group by 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Memory group by 3</from>
       <to>add_date</to>
       <enabled>Y</enabled>
     </hop>
@@ -1070,8 +1100,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>352</yloc>
+      <xloc>367</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1135,8 +1165,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>352</yloc>
+      <xloc>543</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1177,8 +1207,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>352</yloc>
+      <xloc>719</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1234,8 +1264,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>160</yloc>
+      <xloc>1119</xloc>
+      <yloc>190</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1276,8 +1306,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>160</yloc>
+      <xloc>1391</xloc>
+      <yloc>190</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1310,8 +1340,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>352</yloc>
+      <xloc>1391</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1330,10 +1360,10 @@ WHERE f_author_id != 90400
     <use_database>N</use_database>
     <connection>postgres</connection>
     <schema>public</schema>
-    <seqname/>
+    <seqname>tb_co_author_id_seq</seqname>
     <use_counter>Y</use_counter>
     <counter_name/>
-    <start_at>1</start_at>
+    <start_at>8</start_at>
     <increment_by>1</increment_by>
     <max_value>999999999</max_value>
     <attributes/>
@@ -1345,8 +1375,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>352</yloc>
+      <xloc>2272</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1376,8 +1406,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>352</yloc>
+      <xloc>2192</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1394,7 +1424,7 @@ WHERE f_author_id != 90400
     </partitioning>
     <connection>postgres</connection>
     <schema>public</schema>
-    <table>tb_treatise_authors</table>
+    <table>tb_co_author</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -1419,12 +1449,12 @@ WHERE f_author_id != 90400
         <stream_name>add_date</stream_name>
       </field>
       <field>
-        <column_name>f_author_name</column_name>
-        <stream_name>author_name_1</stream_name>
+        <column_name>f_subject_id</column_name>
+        <stream_name>id</stream_name>
       </field>
       <field>
-        <column_name>f_author_id</column_name>
-        <stream_name>auid_1</stream_name>
+        <column_name>f_treatise_id</column_name>
+        <stream_name>f_treatise_id</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -1436,8 +1466,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>352</yloc>
+      <xloc>2368</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1492,8 +1522,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>352</yloc>
+      <xloc>1487</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1510,6 +1540,9 @@ WHERE f_author_id != 90400
     </partitioning>
     <give_back_row>N</give_back_row>
     <group>
+      <field>
+        <name>f_treatise_id</name>
+      </field>
       <field>
         <name>auid_1</name>
       </field>
@@ -1528,8 +1561,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>352</yloc>
+      <xloc>1711</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1578,8 +1611,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>352</yloc>
+      <xloc>1599</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2049,8 +2082,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>464</yloc>
+      <xloc>719</xloc>
+      <yloc>494</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2347,8 +2380,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>464</yloc>
+      <xloc>847</xloc>
+      <yloc>494</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2381,8 +2414,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>352</yloc>
+      <xloc>847</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2446,8 +2479,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>352</yloc>
+      <xloc>1215</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2465,135 +2498,102 @@ WHERE f_author_id != 90400
     <fields>
       <field>
         <name>title_1</name>
-        <rename/>
       </field>
       <field>
         <name>link_1</name>
-        <rename/>
       </field>
       <field>
         <name>auid_1</name>
-        <rename/>
       </field>
       <field>
         <name>author_name_1</name>
-        <rename/>
       </field>
       <field>
         <name>aff_id_1</name>
-        <rename/>
       </field>
       <field>
         <name>subject_1</name>
-        <rename/>
       </field>
       <field>
         <name>date_1</name>
-        <rename/>
       </field>
       <field>
         <name>journal_1</name>
-        <rename/>
       </field>
       <field>
         <name>journal_type_1</name>
-        <rename/>
       </field>
       <field>
         <name>doc_type_1</name>
-        <rename/>
       </field>
       <field>
         <name>issn_1</name>
-        <rename/>
       </field>
       <field>
         <name>doi_1</name>
-        <rename/>
       </field>
       <field>
         <name>uni_1</name>
-        <rename/>
       </field>
       <field>
         <name>city_1</name>
-        <rename/>
       </field>
       <field>
         <name>country_1</name>
-        <rename/>
       </field>
       <field>
         <name>eid_1</name>
-        <rename/>
       </field>
       <field>
         <name>doc_type_full_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2015_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2015_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2015_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2015_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2016_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2016_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2017_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2017_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2018_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2018_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2019_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2019_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2021_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2021_1</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2606,8 +2606,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>352</yloc>
+      <xloc>943</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2654,8 +2654,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>352</yloc>
+      <xloc>1119</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2952,8 +2952,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>352</yloc>
+      <xloc>1023</xloc>
+      <yloc>382</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3034,8 +3034,254 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>352</yloc>
+      <xloc>1295</xloc>
+      <yloc>382</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>postgres</connection>
+    <sql>SELECT
+  id
+, add_date
+, f_author_name
+, f_author_id
+FROM "public".tb_treatise_authors
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1760</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 7</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>f_author_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_author_name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 8</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>auid_1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>author_name_1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1808</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join 3</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>Sort rows 8</step1>
+    <step2>Sort rows 7</step2>
+    <keys_1>
+      <key>auid_1</key>
+      <key>author_name_1</key>
+    </keys_1>
+    <keys_2>
+      <key>f_author_id</key>
+      <key>f_author_name</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1904</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>f_treatise_id</name>
+        <rename/>
+      </field>
+      <field>
+        <name>id</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1984</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Memory group by 3</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>f_treatise_id</name>
+      </field>
+      <field>
+        <name>id</name>
+      </field>
+    </group>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2096</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

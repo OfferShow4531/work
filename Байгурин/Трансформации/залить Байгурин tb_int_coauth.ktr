@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>залить Байгурин tb_treatise_author</name>
+    <name>залить Байгурин tb_int_coauth</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,17 +427,17 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2021/05/20 16:25:25.176</created_date>
+    <created_date>2021/05/21 12:45:23.527</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/05/20 16:25:25.176</modified_date>
+    <modified_date>2021/05/21 12:45:23.527</modified_date>
     <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
       <note>auid 56195375100, 57214647658 filter</note>
-      <xloc>176</xloc>
-      <yloc>288</yloc>
+      <xloc>755</xloc>
+      <yloc>380</yloc>
       <width>202</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -519,6 +519,11 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Sort rows 4</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>tb_treatise</from>
       <to>Sort rows 3</to>
       <enabled>Y</enabled>
@@ -529,8 +534,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>add_date</from>
-      <to>Add sequence</to>
+      <from>Merge join 2</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -539,8 +544,18 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Merge join 2</from>
-      <to>Select values</to>
+      <from>add_date</from>
+      <to>Add sequence</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Memory group by</from>
+      <to>Sort rows 8</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -554,11 +569,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows 4</from>
-      <to>Merge join</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows 2</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
@@ -569,13 +579,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2</from>
-      <to>Sort rows 5</to>
+      <from>Filter rows 3</from>
+      <to>Sort rows 6</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows 5</from>
-      <to>Memory group by 2</to>
+      <from>Select values 2</from>
+      <to>Sort rows 5</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -584,8 +594,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 3</from>
-      <to>Sort rows 6</to>
+      <from>Sort rows 5</from>
+      <to>Memory group by 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -594,12 +604,57 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Sort rows</to>
+      <from>treatise_authors</from>
+      <to>Sort rows 7</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Memory group by</from>
+      <from>Sort rows 7</from>
+      <to>Merge join 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 8</from>
+      <to>Merge join 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join 3</from>
+      <to>Select values 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
+      <to>Memory group by 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Microsoft Excel input</from>
+      <to>Sort rows 9</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Memory group by 3</from>
+      <to>Sort rows 10</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 10</from>
+      <to>Merge join 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 9</from>
+      <to>Merge join 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join 4</from>
+      <to>top50</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>top50</from>
       <to>add_date</to>
       <enabled>Y</enabled>
     </hop>
@@ -1070,8 +1125,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>352</yloc>
+      <xloc>659</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1135,8 +1190,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>352</yloc>
+      <xloc>835</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1177,8 +1232,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>352</yloc>
+      <xloc>1011</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1234,8 +1289,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>160</yloc>
+      <xloc>1411</xloc>
+      <yloc>252</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1276,8 +1331,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>160</yloc>
+      <xloc>1683</xloc>
+      <yloc>252</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1310,8 +1365,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>352</yloc>
+      <xloc>1683</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1330,10 +1385,10 @@ WHERE f_author_id != 90400
     <use_database>N</use_database>
     <connection>postgres</connection>
     <schema>public</schema>
-    <seqname/>
+    <seqname>tb_co_author_id_seq</seqname>
     <use_counter>Y</use_counter>
     <counter_name/>
-    <start_at>1</start_at>
+    <start_at>8</start_at>
     <increment_by>1</increment_by>
     <max_value>999999999</max_value>
     <attributes/>
@@ -1345,8 +1400,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>352</yloc>
+      <xloc>2928</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1376,8 +1431,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>352</yloc>
+      <xloc>2848</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1394,7 +1449,7 @@ WHERE f_author_id != 90400
     </partitioning>
     <connection>postgres</connection>
     <schema>public</schema>
-    <table>tb_treatise_authors</table>
+    <table>tb_int_coauth</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -1419,12 +1474,24 @@ WHERE f_author_id != 90400
         <stream_name>add_date</stream_name>
       </field>
       <field>
-        <column_name>f_author_name</column_name>
-        <stream_name>author_name_1</stream_name>
+        <column_name>f_coauthor_id</column_name>
+        <stream_name>id</stream_name>
       </field>
       <field>
-        <column_name>f_author_id</column_name>
-        <stream_name>auid_1</stream_name>
+        <column_name>f_organization_name</column_name>
+        <stream_name>uni_1</stream_name>
+      </field>
+      <field>
+        <column_name>f_city</column_name>
+        <stream_name>city_1</stream_name>
+      </field>
+      <field>
+        <column_name>f_country</column_name>
+        <stream_name>country_1</stream_name>
+      </field>
+      <field>
+        <column_name>f_in_top50</column_name>
+        <stream_name>f_in_top50</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -1436,8 +1503,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>352</yloc>
+      <xloc>3024</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1459,27 +1526,21 @@ WHERE f_author_id != 90400
       </field>
       <field>
         <name>title_1</name>
-        <rename/>
       </field>
       <field>
         <name>auid_1</name>
-        <rename/>
       </field>
       <field>
         <name>author_name_1</name>
-        <rename/>
       </field>
       <field>
         <name>uni_1</name>
-        <rename/>
       </field>
       <field>
         <name>city_1</name>
-        <rename/>
       </field>
       <field>
         <name>country_1</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1492,8 +1553,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>352</yloc>
+      <xloc>1779</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1511,10 +1572,22 @@ WHERE f_author_id != 90400
     <give_back_row>N</give_back_row>
     <group>
       <field>
+        <name>f_treatise_id</name>
+      </field>
+      <field>
         <name>auid_1</name>
       </field>
       <field>
         <name>author_name_1</name>
+      </field>
+      <field>
+        <name>uni_1</name>
+      </field>
+      <field>
+        <name>city_1</name>
+      </field>
+      <field>
+        <name>country_1</name>
       </field>
     </group>
     <fields>
@@ -1528,8 +1601,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>352</yloc>
+      <xloc>2003</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1578,8 +1651,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>352</yloc>
+      <xloc>1891</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2049,8 +2122,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>464</yloc>
+      <xloc>1011</xloc>
+      <yloc>556</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2347,8 +2420,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>464</yloc>
+      <xloc>1139</xloc>
+      <yloc>556</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2381,8 +2454,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>352</yloc>
+      <xloc>1139</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2446,8 +2519,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>352</yloc>
+      <xloc>1507</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2465,135 +2538,102 @@ WHERE f_author_id != 90400
     <fields>
       <field>
         <name>title_1</name>
-        <rename/>
       </field>
       <field>
         <name>link_1</name>
-        <rename/>
       </field>
       <field>
         <name>auid_1</name>
-        <rename/>
       </field>
       <field>
         <name>author_name_1</name>
-        <rename/>
       </field>
       <field>
         <name>aff_id_1</name>
-        <rename/>
       </field>
       <field>
         <name>subject_1</name>
-        <rename/>
       </field>
       <field>
         <name>date_1</name>
-        <rename/>
       </field>
       <field>
         <name>journal_1</name>
-        <rename/>
       </field>
       <field>
         <name>journal_type_1</name>
-        <rename/>
       </field>
       <field>
         <name>doc_type_1</name>
-        <rename/>
       </field>
       <field>
         <name>issn_1</name>
-        <rename/>
       </field>
       <field>
         <name>doi_1</name>
-        <rename/>
       </field>
       <field>
         <name>uni_1</name>
-        <rename/>
       </field>
       <field>
         <name>city_1</name>
-        <rename/>
       </field>
       <field>
         <name>country_1</name>
-        <rename/>
       </field>
       <field>
         <name>eid_1</name>
-        <rename/>
       </field>
       <field>
         <name>doc_type_full_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2015_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2015_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2015_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2015_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2016_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2016_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2017_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2017_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2018_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2018_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2019_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2019_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2020_1</name>
-        <rename/>
       </field>
       <field>
         <name>self_cit_2021_1</name>
-        <rename/>
       </field>
       <field>
         <name>noself_cit_2021_1</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2606,8 +2646,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>352</yloc>
+      <xloc>1235</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2654,8 +2694,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>352</yloc>
+      <xloc>1411</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2952,8 +2992,8 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>352</yloc>
+      <xloc>1315</xloc>
+      <yloc>444</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3034,8 +3074,609 @@ WHERE f_author_id != 90400
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>352</yloc>
+      <xloc>1587</xloc>
+      <yloc>444</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>treatise_authors</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>postgres</connection>
+    <sql>SELECT
+  id
+, add_date
+, f_author_name
+, f_author_id
+FROM "public".tb_treatise_authors
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2052</xloc>
+      <yloc>574</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 7</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>f_author_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_author_name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2196</xloc>
+      <yloc>574</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 8</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>auid_1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>author_name_1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2100</xloc>
+      <yloc>446</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join 3</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>Sort rows 8</step1>
+    <step2>Sort rows 7</step2>
+    <keys_1>
+      <key>auid_1</key>
+      <key>author_name_1</key>
+    </keys_1>
+    <keys_2>
+      <key>f_author_id</key>
+      <key>f_author_name</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2196</xloc>
+      <yloc>446</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>f_treatise_id</name>
+        <rename/>
+      </field>
+      <field>
+        <name>id</name>
+        <rename/>
+      </field>
+      <field>
+        <name>uni_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>city_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>country_1</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2276</xloc>
+      <yloc>446</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Memory group by 3</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>f_treatise_id</name>
+      </field>
+      <field>
+        <name>id</name>
+      </field>
+      <field>
+        <name>uni_1</name>
+      </field>
+      <field>
+        <name>city_1</name>
+      </field>
+      <field>
+        <name>country_1</name>
+      </field>
+    </group>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2388</xloc>
+      <yloc>446</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel input</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <noempty>Y</noempty>
+    <stoponempty>N</stoponempty>
+    <filefield/>
+    <sheetfield/>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield/>
+    <filefield/>
+    <limit>0</limit>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
+    <file>
+      <name>C:\Users\DCLocalAdmin\Documents\GitHub\work\Байгурин\Исходники\Топ50 (2).xlsx</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>Rank</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Country</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Region</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Documents</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Citable documents</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Citations</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Self-citations</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Citations per document</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>H index</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+    </fields>
+    <sheets>
+      <sheet>
+        <name>Лист1</name>
+        <startrow>0</startrow>
+        <startcol>0</startcol>
+      </sheet>
+    </sheets>
+    <strict_types>N</strict_types>
+    <error_ignored>N</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <spreadsheet_type>POI</spreadsheet_type>
+    <password>Encrypted </password>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2400</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 9</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>Country</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2560</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 10</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>country_1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2544</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join 4</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>LEFT OUTER</join_type>
+    <step1>Sort rows 10</step1>
+    <step2>Sort rows 9</step2>
+    <keys_1>
+      <key>country_1</key>
+    </keys_1>
+    <keys_2>
+      <key>Country</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2656</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>top50</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <formula>
+      <field_name>f_in_top50</field_name>
+      <formula_string>if (ISNA([Country]);0;1)</formula_string>
+      <value_type>Boolean</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field/>
+    </formula>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2752</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

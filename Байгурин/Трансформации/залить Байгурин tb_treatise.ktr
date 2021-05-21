@@ -501,6 +501,28 @@ cant join them though
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>sequence is set by hand
+not automated</note>
+      <xloc>1344</xloc>
+      <yloc>400</yloc>
+      <width>136</width>
+      <heigth>42</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>postgres</name>
@@ -560,11 +582,6 @@ cant join them though
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>from_scopus</from>
-      <to>add_date</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>add_date</from>
       <to>Add sequence</to>
       <enabled>Y</enabled>
@@ -592,7 +609,7 @@ cant join them though
     <hop>
       <from>Add sequence</from>
       <to>Table output</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Table input</from>
@@ -612,6 +629,16 @@ cant join them though
     <hop>
       <from>author_id</from>
       <to>from_scopus</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>from_scopus</from>
+      <to>Memory group by</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Memory group by</from>
+      <to>add_date</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1116,7 +1143,7 @@ cant join them though
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1392</xloc>
+      <xloc>1520</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1706,7 +1733,7 @@ cant join them though
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1504</xloc>
+      <xloc>1616</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1737,7 +1764,7 @@ cant join them though
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1296</xloc>
+      <xloc>1424</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1851,6 +1878,150 @@ cant join them though
     <GUI>
       <xloc>496</xloc>
       <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Memory group by</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>title</name>
+      </field>
+      <field>
+        <name>link</name>
+      </field>
+      <field>
+        <name>auid</name>
+      </field>
+      <field>
+        <name>author_name</name>
+      </field>
+      <field>
+        <name>aff_id</name>
+      </field>
+      <field>
+        <name>date</name>
+      </field>
+      <field>
+        <name>journal</name>
+      </field>
+      <field>
+        <name>journal_type</name>
+      </field>
+      <field>
+        <name>doc_type</name>
+      </field>
+      <field>
+        <name>issn</name>
+      </field>
+      <field>
+        <name>doi</name>
+      </field>
+      <field>
+        <name>uni</name>
+      </field>
+      <field>
+        <name>city</name>
+      </field>
+      <field>
+        <name>country</name>
+      </field>
+      <field>
+        <name>eid</name>
+      </field>
+      <field>
+        <name>doc_type_full</name>
+      </field>
+      <field>
+        <name>self_cit_2015_2020</name>
+      </field>
+      <field>
+        <name>noself_cit_2015_2020</name>
+      </field>
+      <field>
+        <name>self_cit_2015</name>
+      </field>
+      <field>
+        <name>noself_cit_2015</name>
+      </field>
+      <field>
+        <name>self_cit_2016</name>
+      </field>
+      <field>
+        <name>noself_cit_2016</name>
+      </field>
+      <field>
+        <name>self_cit_2017</name>
+      </field>
+      <field>
+        <name>noself_cit_2017</name>
+      </field>
+      <field>
+        <name>self_cit_2018</name>
+      </field>
+      <field>
+        <name>noself_cit_2018</name>
+      </field>
+      <field>
+        <name>self_cit_2019</name>
+      </field>
+      <field>
+        <name>noself_cit_2019</name>
+      </field>
+      <field>
+        <name>self_cit_2020</name>
+      </field>
+      <field>
+        <name>noself_cit_2020</name>
+      </field>
+      <field>
+        <name>self_cit_2021</name>
+      </field>
+      <field>
+        <name>noself_cit_2021</name>
+      </field>
+      <field>
+        <name>dtype</name>
+      </field>
+      <field>
+        <name>id</name>
+      </field>
+      <field>
+        <name>f_code</name>
+      </field>
+      <field>
+        <name>f_value</name>
+      </field>
+      <field>
+        <name>author_id</name>
+      </field>
+      <field>
+        <name>from_scopus</name>
+      </field>
+    </group>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1296</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -564,11 +564,6 @@ it's 497
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>source</from>
-      <to>add_date</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Merge join</from>
       <to>author_id</to>
       <enabled>Y</enabled>
@@ -606,6 +601,16 @@ it's 497
     <hop>
       <from>author_id</from>
       <to>Sort rows 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>source</from>
+      <to>f_author_id != 90400</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_author_id != 90400</from>
+      <to>add_date</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1535,7 +1540,7 @@ it's 497
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
+      <xloc>1712</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1566,7 +1571,7 @@ it's 497
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1504</xloc>
+      <xloc>1616</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1684,7 +1689,7 @@ it's 497
       </field>
       <field>
         <column_name>add_date</column_name>
-        <stream_name>add_date</stream_name>
+        <stream_name>add_date_1</stream_name>
       </field>
       <field>
         <column_name>f_affiliation_country</column_name>
@@ -1728,7 +1733,7 @@ it's 497
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1712</xloc>
+      <xloc>1824</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2116,6 +2121,50 @@ FROM "public".tb_treatise
     </remotesteps>
     <GUI>
       <xloc>1280</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>f_author_id != 90400</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to/>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>f_author_id</leftvalue>
+        <function>&lt;></function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>90400</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>####0;-####0</mask>
+        </value>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1520</xloc>
       <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
