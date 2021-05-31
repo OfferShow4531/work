@@ -1086,6 +1086,14 @@ Edu_SpecialityOrgUnits
         <name>ParentID</name>
         <rename/>
       </field>
+      <field>
+        <name>LevelID</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Code</name>
+        <rename/>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -2051,7 +2059,7 @@ SELECT [StudentID]
         <presorted>N</presorted>
       </field>
       <field>
-        <name>Title_1</name>
+        <name>Code</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -2101,7 +2109,10 @@ SELECT [StudentID]
         <name>Title_2</name>
       </field>
       <field>
-        <name>Title_1</name>
+        <name>Code</name>
+      </field>
+      <field>
+        <name>LevelID</name>
       </field>
     </group>
     <fields>
@@ -2443,6 +2454,14 @@ FROM dbo.Edu_OrgUnits
         <name>FirstName</name>
         <rename/>
       </field>
+      <field>
+        <name>LevelID</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Code</name>
+        <rename/>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -2495,7 +2514,7 @@ FROM dbo.Edu_OrgUnits
         <presorted>N</presorted>
       </field>
       <field>
-        <name>Title_1</name>
+        <name>Code</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
