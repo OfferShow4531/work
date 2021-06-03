@@ -430,7 +430,7 @@
     <created_date>2021/05/28 17:45:20.524</created_date>
     <modified_user>-</modified_user>
     <modified_date>2021/05/28 17:45:20.524</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -687,12 +687,12 @@
     <hop>
       <from>Sort rows 9</from>
       <to>Memory group by</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Memory group by</from>
       <to>Microsoft Excel output</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Sort rows 3 2 2 2</from>
@@ -707,7 +707,7 @@
     <hop>
       <from>Filter rows 2</from>
       <to>Sort rows 9</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>Filter rows 2</from>
@@ -716,8 +716,8 @@
     </hop>
   </order>
   <step>
-    <name>all pps with spc 2</name>
-    <type>TableInput</type>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -726,56 +726,16 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>sso</connection>
-    <sql>SELECT sm.ID "semID"
-	  ,smCrs.ID "smCrsID"
-	  ,smCrs.Title "smCrsTitle"
-	  ,smCrsGrp.ID "smCrsGrpID"
-	  ,smCrsGrpStd.StudentID "smCrsGrpStd.StudentID"
-	  ,smCrsSct.InstructorID "smCrsSct.InstructorID"
-	  ,std.SpecialityID "std.SpecialityID"
-  FROM
-  /*Сначала наши семестры*/
-  [KazNITU].[dbo].[Edu_Semesters] sm
-  /*Теперь соединяем с КурсамиСеместра*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourses] smCrs
-  ON
-  smCrs.SemesterID = sm.ID
-  /*Теперь вытаскиваем группы каждого курса*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourseGroups] smCrsGrp
-  ON
-  smCrsGrp.SemesterCourseID = smCrs.ID
-  /*Теперь соединяем с группами*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourseGroupStudents] smCrsGrpStd
-  ON
-  smCrsGrpStd.CourseGroupID = smCrsGrp.ID
-  /*Объединяем с секциями, чтобы вытащить перподавателей групп*/
-  RIGHT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourseSections] smCrsSct
-  ON
-  smCrsSct.CourseGroupID = smCrsGrp.ID
-  /*объединяем со студентами*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_Students] std
-  ON
-  std.StudentID = smCrsGrpStd.StudentID
-  
-  WHERE
-  /*Сначала ограничим только по нашему году обучения*/
-  sm.ID IN (11, 64)
-  AND std.SpecialityID = 174
-  /**************************************************/
-  GROUP BY  sm.ID, smCrs.ID, smCrs.Title,  smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID
-  /*WTF*/
-  ORDER BY sm.ID, smCrs.ID, smCrs.Title, smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <send_true_to>Sort rows 8</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>Title_2</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -785,14 +745,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>375</xloc>
-      <yloc>156</yloc>
+      <xloc>1440</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Sort rows 3 2 2</name>
-    <type>SortRows</type>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -801,23 +761,25 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>std.SpecialityID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
+    <send_true_to>Microsoft Excel output 2</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>Code</leftvalue>
+        <function>=</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>String</type>
+          <text>6M070400</text>
+          <length>-1</length>
+          <precision>-1</precision>
+          <isnull>N</isnull>
+          <mask/>
+        </value>
+      </condition>
+    </compare>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -827,94 +789,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>695</xloc>
-      <yloc>156</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 11 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>smCrsSct.InstructorID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>std.SpecialityID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>471</xloc>
-      <yloc>156</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Memory group by 3 2</name>
-    <type>MemoryGroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>smCrsSct.InstructorID</name>
-      </field>
-      <field>
-        <name>std.SpecialityID</name>
-      </field>
-    </group>
-    <fields>
-      </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>583</xloc>
-      <yloc>156</yloc>
+      <xloc>1712</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -963,8 +839,8 @@
     </GUI>
   </step>
   <step>
-    <name>edu_users</name>
-    <type>TableInput</type>
+    <name>Memory group by</name>
+    <type>MemoryGroupBy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -973,19 +849,29 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>sso</connection>
-    <sql>SELECT
-  ID
-, LastName
-, FirstName
-, MiddleName
-FROM dbo.Edu_Users
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>Title_2</name>
+      </field>
+      <field>
+        <name>Title_1</name>
+      </field>
+      <field>
+        <name>Code</name>
+      </field>
+      <field>
+        <name>LevelID</name>
+      </field>
+    </group>
+    <fields>
+      <field>
+        <aggregate>numOfTeachers</aggregate>
+        <subject>smCrsSct.InstructorID</subject>
+        <type>COUNT_ALL</type>
+        <valuefield/>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -995,8 +881,365 @@ FROM dbo.Edu_Users
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>256</yloc>
+      <xloc>1952</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Memory group by 3 2</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>smCrsSct.InstructorID</name>
+      </field>
+      <field>
+        <name>std.SpecialityID</name>
+      </field>
+    </group>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>583</xloc>
+      <yloc>156</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Memory group by 3 2 2</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>smCrsSct.InstructorID</name>
+      </field>
+      <field>
+        <name>LevelID</name>
+      </field>
+      <field>
+        <name>std.SpecialityID</name>
+      </field>
+    </group>
+    <fields>
+      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>800</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>LEFT OUTER</join_type>
+    <step1>Sort rows 2</step1>
+    <step2>Sort rows</step2>
+    <keys_1>
+      <key>smCrsSct.InstructorID</key>
+    </keys_1>
+    <keys_2>
+      <key>ID</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1024</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>LEFT OUTER</join_type>
+    <step1>Sort rows 2 2</step1>
+    <step2>Sort rows 4</step2>
+    <keys_1>
+      <key>smCrsSct.InstructorID</key>
+    </keys_1>
+    <keys_2>
+      <key>ID</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1264</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join 3</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>Sort rows 11 2 2</step1>
+    <step2>Sort rows 5</step2>
+    <keys_1>
+      <key>std.SpecialityID</key>
+    </keys_1>
+    <keys_2>
+      <key>ID</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join 4</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>Sort rows 7</step1>
+    <step2>Sort rows 8</step2>
+    <keys_1>
+      <key>std.SpecialityID</key>
+    </keys_1>
+    <keys_2>
+      <key>SpecialityID</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1616</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel output</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C:\Users\DCLocalAdmin\Documents\GitHub\work\Задание от Маралым (27.05.21)\преподователи по институту, кафедре, специальности и уровню.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>2064</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Microsoft Excel output 2</name>
+    <type>ExcelOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <header>Y</header>
+    <footer>N</footer>
+    <encoding/>
+    <append>N</append>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>C:\Users\DCLocalAdmin\Documents\GitHub\work\Задание от Маралым (27.05.21)\преподы по специальности 5B070400.xls</name>
+      <extention>xls</extention>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+      <create_parent_folder>N</create_parent_folder>
+      <split>N</split>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <sheetname>Sheet1</sheetname>
+      <autosizecolums>N</autosizecolums>
+      <nullisblank>N</nullisblank>
+      <protect_sheet>N</protect_sheet>
+      <password>Encrypted </password>
+      <splitevery>0</splitevery>
+      <usetempfiles>N</usetempfiles>
+      <tempdirectory/>
+    </file>
+    <template>
+      <enabled>N</enabled>
+      <append>N</append>
+      <filename>template.xls</filename>
+    </template>
+    <fields>
+    </fields>
+    <custom>
+      <header_font_name>arial</header_font_name>
+      <header_font_size>10</header_font_size>
+      <header_font_bold>N</header_font_bold>
+      <header_font_italic>N</header_font_italic>
+      <header_font_underline>no</header_font_underline>
+      <header_font_orientation>horizontal</header_font_orientation>
+      <header_font_color>black</header_font_color>
+      <header_background_color>none</header_background_color>
+      <header_row_height>255</header_row_height>
+      <header_alignment>left</header_alignment>
+      <header_image/>
+      <row_font_name>arial</row_font_name>
+      <row_font_size>10</row_font_size>
+      <row_font_color>black</row_font_color>
+      <row_background_color>none</row_background_color>
+    </custom>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1808</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1067,6 +1310,98 @@ FROM dbo.Edu_Users
     </GUI>
   </step>
   <step>
+    <name>Sort rows 11 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>smCrsSct.InstructorID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>std.SpecialityID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>471</xloc>
+      <yloc>156</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 11 2 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>std.SpecialityID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Sort rows 2</name>
     <type>SortRows</type>
     <description/>
@@ -1109,8 +1444,8 @@ FROM dbo.Edu_Users
     </GUI>
   </step>
   <step>
-    <name>Merge join</name>
-    <type>MergeJoin</type>
+    <name>Sort rows 2 2</name>
+    <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1119,15 +1454,23 @@ FROM dbo.Edu_Users
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>LEFT OUTER</join_type>
-    <step1>Sort rows 2</step1>
-    <step2>Sort rows</step2>
-    <keys_1>
-      <key>smCrsSct.InstructorID</key>
-    </keys_1>
-    <keys_2>
-      <key>ID</key>
-    </keys_2>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>smCrsSct.InstructorID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1137,8 +1480,8 @@ FROM dbo.Edu_Users
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>160</yloc>
+      <xloc>1168</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1217,383 +1560,6 @@ FROM dbo.Edu_Users
     </GUI>
   </step>
   <step>
-    <name>all pps with spc 2 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>sso</connection>
-    <sql>SELECT sm.ID "semID"
-	  ,smCrs.ID "smCrsID"
-	  ,smCrs.Title "smCrsTitle"
-	  ,smCrsGrp.ID "smCrsGrpID"
-	  ,smCrsGrpStd.StudentID "smCrsGrpStd.StudentID"
-	  ,smCrsSct.InstructorID "smCrsSct.InstructorID"
-	  ,std.SpecialityID "std.SpecialityID"
-  FROM
-  /*Сначала наши семестры*/
-  [KazNITU].[dbo].[Edu_Semesters] sm
-  /*Теперь соединяем с КурсамиСеместра*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourses] smCrs
-  ON
-  smCrs.SemesterID = sm.ID
-  /*Теперь вытаскиваем группы каждого курса*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourseGroups] smCrsGrp
-  ON
-  smCrsGrp.SemesterCourseID = smCrs.ID
-  /*Теперь соединяем с группами*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourseGroupStudents] smCrsGrpStd
-  ON
-  smCrsGrpStd.CourseGroupID = smCrsGrp.ID
-  /*Объединяем с секциями, чтобы вытащить перподавателей групп*/
-  RIGHT OUTER JOIN
-  [KazNITU].[dbo].[Edu_SemesterCourseSections] smCrsSct
-  ON
-  smCrsSct.CourseGroupID = smCrsGrp.ID
-  /*объединяем со студентами*/
-  LEFT OUTER JOIN
-  [KazNITU].[dbo].[Edu_Students] std
-  ON
-  std.StudentID = smCrsGrpStd.StudentID
-  
-  WHERE
-  /*Сначала ограничим только по нашему году обучения*/
-  sm.ID IN (11, 64)
-  /**************************************************/
-  GROUP BY  sm.ID, smCrs.ID, smCrs.Title,  smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID
-  /*WTF*/
-  ORDER BY sm.ID, smCrs.ID, smCrs.Title, smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 3 2 2 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>std.SpecialityID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>944</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 11 2 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>std.SpecialityID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>432</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Memory group by 3 2 2</name>
-    <type>MemoryGroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>smCrsSct.InstructorID</name>
-      </field>
-      <field>
-        <name>LevelID</name>
-      </field>
-      <field>
-        <name>std.SpecialityID</name>
-      </field>
-    </group>
-    <fields>
-      </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>edu_users 2</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>sso</connection>
-    <sql>SELECT
-  ID
-, LastName
-, FirstName
-, MiddleName
-FROM dbo.Edu_Users
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1072</xloc>
-      <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 4</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>ID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>LastName</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>FirstName</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>MiddleName</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1168</xloc>
-      <yloc>496</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 2 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>smCrsSct.InstructorID</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1168</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Merge join 2</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>LEFT OUTER</join_type>
-    <step1>Sort rows 2 2</step1>
-    <step2>Sort rows 4</step2>
-    <keys_1>
-      <key>smCrsSct.InstructorID</key>
-    </keys_1>
-    <keys_2>
-      <key>ID</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1264</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Sort rows 3 2</name>
     <type>SortRows</type>
     <description/>
@@ -1668,8 +1634,8 @@ FROM dbo.Edu_Users
     </GUI>
   </step>
   <step>
-    <name>edu_specialities</name>
-    <type>TableInput</type>
+    <name>Sort rows 3 2 2</name>
+    <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1678,17 +1644,23 @@ FROM dbo.Edu_Users
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>sso</connection>
-    <sql>SELECT
-  ID
-, LevelID
-FROM dbo.Edu_Specialities
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>std.SpecialityID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1698,8 +1670,116 @@ FROM dbo.Edu_Specialities
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>512</yloc>
+      <xloc>695</xloc>
+      <yloc>156</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 3 2 2 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>std.SpecialityID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 4</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>ID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>LastName</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>FirstName</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>MiddleName</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1734,40 +1814,6 @@ FROM dbo.Edu_Specialities
     <GUI>
       <xloc>432</xloc>
       <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Merge join 3</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>Sort rows 11 2 2</step1>
-    <step2>Sort rows 5</step2>
-    <keys_1>
-      <key>std.SpecialityID</key>
-    </keys_1>
-    <keys_2>
-      <key>ID</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1826,89 +1872,6 @@ FROM dbo.Edu_Specialities
     <GUI>
       <xloc>672</xloc>
       <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>specs with institutions</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>sso</connection>
-    <sql>/****** Скрипт для команды SelectTopNRows из среды SSMS  ******/
-SELECT 
-	spg.[SpecialityID]
-	  ,spc.[Title]
-	  ,spc.Code
-      ,[OrgUnitID]
-	  ,org.[Title]
-	  ,orgPrnt.Title
-  FROM 
-  [KazNITU].[dbo].[Edu_SpecialityOrgUnits] spg
-  LEFT OUTER JOIN [KazNITU].[dbo].[Edu_OrgUnits] org
-  ON spg.OrgUnitID = org.Id
-  LEFT OUTER JOIN [KazNITU].[dbo].[Edu_Specialities] spc
-  ON spg.SpecialityID = spc.id
-  LEFT OUTER JOIN [KazNITU].[dbo].[Edu_OrgUnits] orgPrnt
-  ON orgPrnt.ID = org.ParentID
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Sort rows 8</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>Title_2</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1440</xloc>
-      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1997,88 +1960,6 @@ SELECT
     </GUI>
   </step>
   <step>
-    <name>Merge join 4</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>Sort rows 7</step1>
-    <step2>Sort rows 8</step2>
-    <keys_1>
-      <key>std.SpecialityID</key>
-    </keys_1>
-    <keys_2>
-      <key>SpecialityID</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1616</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Memory group by</name>
-    <type>MemoryGroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <give_back_row>N</give_back_row>
-    <group>
-      <field>
-        <name>Title_2</name>
-      </field>
-      <field>
-        <name>Title_1</name>
-      </field>
-      <field>
-        <name>Code</name>
-      </field>
-      <field>
-        <name>LevelID</name>
-      </field>
-    </group>
-    <fields>
-      <field>
-        <aggregate>numOfTeachers</aggregate>
-        <subject>smCrsSct.InstructorID</subject>
-        <type>COUNT_ALL</type>
-        <valuefield/>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1952</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Sort rows 9</name>
     <type>SortRows</type>
     <description/>
@@ -2153,8 +2034,8 @@ SELECT
     </GUI>
   </step>
   <step>
-    <name>Microsoft Excel output</name>
-    <type>ExcelOutput</type>
+    <name>all pps with spc 2</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2163,54 +2044,56 @@ SELECT
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <header>Y</header>
-    <footer>N</footer>
-    <encoding/>
-    <append>N</append>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>C:\Users\DCLocalAdmin\Documents\GitHub\work\Задание от Маралым (27.05.21)\преподователи по институту, кафедре, специальности и уровню.xls</name>
-      <extention>xls</extention>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
-      <create_parent_folder>N</create_parent_folder>
-      <split>N</split>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <sheetname>Sheet1</sheetname>
-      <autosizecolums>N</autosizecolums>
-      <nullisblank>N</nullisblank>
-      <protect_sheet>N</protect_sheet>
-      <password>Encrypted </password>
-      <splitevery>0</splitevery>
-      <usetempfiles>N</usetempfiles>
-      <tempdirectory/>
-    </file>
-    <template>
-      <enabled>N</enabled>
-      <append>N</append>
-      <filename>template.xls</filename>
-    </template>
-    <fields>
-    </fields>
-    <custom>
-      <header_font_name>arial</header_font_name>
-      <header_font_size>10</header_font_size>
-      <header_font_bold>N</header_font_bold>
-      <header_font_italic>N</header_font_italic>
-      <header_font_underline>no</header_font_underline>
-      <header_font_orientation>horizontal</header_font_orientation>
-      <header_font_color>black</header_font_color>
-      <header_background_color>none</header_background_color>
-      <header_row_height>255</header_row_height>
-      <header_alignment>left</header_alignment>
-      <header_image/>
-      <row_font_name>arial</row_font_name>
-      <row_font_size>10</row_font_size>
-      <row_font_color>black</row_font_color>
-      <row_background_color>none</row_background_color>
-    </custom>
+    <connection>sso</connection>
+    <sql>SELECT sm.ID "semID"
+	  ,smCrs.ID "smCrsID"
+	  ,smCrs.Title "smCrsTitle"
+	  ,smCrsGrp.ID "smCrsGrpID"
+	  ,smCrsGrpStd.StudentID "smCrsGrpStd.StudentID"
+	  ,smCrsSct.InstructorID "smCrsSct.InstructorID"
+	  ,std.SpecialityID "std.SpecialityID"
+  FROM
+  /*Сначала наши семестры*/
+  [KazNITU].[dbo].[Edu_Semesters] sm
+  /*Теперь соединяем с КурсамиСеместра*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourses] smCrs
+  ON
+  smCrs.SemesterID = sm.ID
+  /*Теперь вытаскиваем группы каждого курса*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourseGroups] smCrsGrp
+  ON
+  smCrsGrp.SemesterCourseID = smCrs.ID
+  /*Теперь соединяем с группами*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourseGroupStudents] smCrsGrpStd
+  ON
+  smCrsGrpStd.CourseGroupID = smCrsGrp.ID
+  /*Объединяем с секциями, чтобы вытащить перподавателей групп*/
+  RIGHT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourseSections] smCrsSct
+  ON
+  smCrsSct.CourseGroupID = smCrsGrp.ID
+  /*объединяем со студентами*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_Students] std
+  ON
+  std.StudentID = smCrsGrpStd.StudentID
+  
+  WHERE
+  /*Сначала ограничим только по нашему году обучения*/
+  sm.ID IN (11, 64)
+  AND std.SpecialityID = 174
+  /**************************************************/
+  GROUP BY  sm.ID, smCrs.ID, smCrs.Title,  smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID
+  /*WTF*/
+  ORDER BY sm.ID, smCrs.ID, smCrs.Title, smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2220,14 +2103,88 @@ SELECT
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2064</xloc>
+      <xloc>375</xloc>
+      <yloc>156</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>all pps with spc 2 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>sso</connection>
+    <sql>SELECT sm.ID "semID"
+	  ,smCrs.ID "smCrsID"
+	  ,smCrs.Title "smCrsTitle"
+	  ,smCrsGrp.ID "smCrsGrpID"
+	  ,smCrsGrpStd.StudentID "smCrsGrpStd.StudentID"
+	  ,smCrsSct.InstructorID "smCrsSct.InstructorID"
+	  ,std.SpecialityID "std.SpecialityID"
+  FROM
+  /*Сначала наши семестры*/
+  [KazNITU].[dbo].[Edu_Semesters] sm
+  /*Теперь соединяем с КурсамиСеместра*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourses] smCrs
+  ON
+  smCrs.SemesterID = sm.ID
+  /*Теперь вытаскиваем группы каждого курса*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourseGroups] smCrsGrp
+  ON
+  smCrsGrp.SemesterCourseID = smCrs.ID
+  /*Теперь соединяем с группами*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourseGroupStudents] smCrsGrpStd
+  ON
+  smCrsGrpStd.CourseGroupID = smCrsGrp.ID
+  /*Объединяем с секциями, чтобы вытащить перподавателей групп*/
+  RIGHT OUTER JOIN
+  [KazNITU].[dbo].[Edu_SemesterCourseSections] smCrsSct
+  ON
+  smCrsSct.CourseGroupID = smCrsGrp.ID
+  /*объединяем со студентами*/
+  LEFT OUTER JOIN
+  [KazNITU].[dbo].[Edu_Students] std
+  ON
+  std.StudentID = smCrsGrpStd.StudentID
+  
+  WHERE
+  /*Сначала ограничим только по нашему году обучения*/
+  sm.ID IN (11, 64)
+  /**************************************************/
+  GROUP BY  sm.ID, smCrs.ID, smCrs.Title,  smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID
+  /*WTF*/
+  ORDER BY sm.ID, smCrs.ID, smCrs.Title, smCrsGrp.ID, smCrsGrpStd.StudentID, smCrsSct.InstructorID, std.SpecialityID</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Filter rows 2</name>
-    <type>FilterRows</type>
+    <name>edu_specialities</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2236,25 +2193,17 @@ SELECT
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Microsoft Excel output 2</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>Code</leftvalue>
-        <function>=</function>
-        <rightvalue/>
-        <value>
-          <name>constant</name>
-          <type>String</type>
-          <text>5B070400</text>
-          <length>-1</length>
-          <precision>-1</precision>
-          <isnull>N</isnull>
-          <mask/>
-        </value>
-      </condition>
-    </compare>
+    <connection>sso</connection>
+    <sql>SELECT
+  ID
+, LevelID
+FROM dbo.Edu_Specialities
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2264,14 +2213,14 @@ SELECT
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1712</xloc>
-      <yloc>400</yloc>
+      <xloc>320</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Microsoft Excel output 2</name>
-    <type>ExcelOutput</type>
+    <name>edu_users</name>
+    <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -2280,54 +2229,19 @@ SELECT
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <header>Y</header>
-    <footer>N</footer>
-    <encoding/>
-    <append>N</append>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>C:\Users\DCLocalAdmin\Documents\GitHub\work\Задание от Маралым (27.05.21)\преподы по специальности 5B070400.xls</name>
-      <extention>xls</extention>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
-      <create_parent_folder>N</create_parent_folder>
-      <split>N</split>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <sheetname>Sheet1</sheetname>
-      <autosizecolums>N</autosizecolums>
-      <nullisblank>N</nullisblank>
-      <protect_sheet>N</protect_sheet>
-      <password>Encrypted </password>
-      <splitevery>0</splitevery>
-      <usetempfiles>N</usetempfiles>
-      <tempdirectory/>
-    </file>
-    <template>
-      <enabled>N</enabled>
-      <append>N</append>
-      <filename>template.xls</filename>
-    </template>
-    <fields>
-    </fields>
-    <custom>
-      <header_font_name>arial</header_font_name>
-      <header_font_size>10</header_font_size>
-      <header_font_bold>N</header_font_bold>
-      <header_font_italic>N</header_font_italic>
-      <header_font_underline>no</header_font_underline>
-      <header_font_orientation>horizontal</header_font_orientation>
-      <header_font_color>black</header_font_color>
-      <header_background_color>none</header_background_color>
-      <header_row_height>255</header_row_height>
-      <header_alignment>left</header_alignment>
-      <header_image/>
-      <row_font_name>arial</row_font_name>
-      <row_font_size>10</row_font_size>
-      <row_font_color>black</row_font_color>
-      <row_background_color>none</row_background_color>
-    </custom>
+    <connection>sso</connection>
+    <sql>SELECT
+  ID
+, LastName
+, FirstName
+, MiddleName
+FROM dbo.Edu_Users
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2337,8 +2251,94 @@ SELECT
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1760</xloc>
-      <yloc>464</yloc>
+      <xloc>832</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>edu_users 2</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>sso</connection>
+    <sql>SELECT
+  ID
+, LastName
+, FirstName
+, MiddleName
+FROM dbo.Edu_Users
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>496</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>specs with institutions</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>sso</connection>
+    <sql>/****** Скрипт для команды SelectTopNRows из среды SSMS  ******/
+SELECT 
+	spg.[SpecialityID]
+	  ,spc.[Title]
+	  ,spc.Code
+      ,[OrgUnitID]
+	  ,org.[Title]
+	  ,orgPrnt.Title
+  FROM 
+  [KazNITU].[dbo].[Edu_SpecialityOrgUnits] spg
+  LEFT OUTER JOIN [KazNITU].[dbo].[Edu_OrgUnits] org
+  ON spg.OrgUnitID = org.Id
+  LEFT OUTER JOIN [KazNITU].[dbo].[Edu_Specialities] spc
+  ON spg.SpecialityID = spc.id
+  LEFT OUTER JOIN [KazNITU].[dbo].[Edu_OrgUnits] orgPrnt
+  ON orgPrnt.ID = org.ParentID
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
