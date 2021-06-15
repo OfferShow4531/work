@@ -1,0 +1,95 @@
+1) tb_int_coauth (-) - currval нет, порядок нормальный, id добавляется вручную через пентахо
+
+2) tb_co_author (tb_co_author_id_seq) - wtf, вроде норм полностью.
+
+3) tb_journal (tb_journal_id_seq) - нормальный, починил
+
+4) tb_journal_report (tb_journal_report_id_seq) - 16 lastval, 16 макс в таблице, порядок нормальный, seq подключен к столбцу
+
+5) tb_subject_timeline (-) - 8165 макс в таблице, порядок нормальный (более менее), seq подключен к стобцу
+
+6) tb_treatise (tb_treatise_id_seq) - 4542 lastval, 6430 макс в таблице, порядок нормальный, id добавляется вручную через пентахо (для Байгурина, возможно прикручен)
+
+7) tb_treatise_authors (tb_treatise_authors_id_seq) - 1 lastval, 12 макс в таблице, порядок нормальный, id добавляется вручную через пентахо, (для Байгурина, возможно прикручен)
+
+8) tb_treatise_citation (-) - 40793 макс в таблице, порядок нормальный, id добавляется вручную через пентахо, (для Байгурина)
+
+9) tb_treatise_report (tb_treatise_report_id_seq) - 23 lastval, 23 макс в таблице, порядок нормальный (так себе...), seq подключен к стобцу
+
+10) tb_treatise_scopus_wos (tb_treatise_scopus_wos_id_seq) - 1 lastval, 3849 макс в таблице, порядок нормальный, id добавляется вручную через пентахо, (для Байгурина, возможно прикручен)
+
+11) tb_indiv_subject_id_seq - 90499 lastvalue, 90499 макс в таблице. Порядок странный,
+
+SELECT id
+FROM public.tb_indiv_subject
+ORDER BY id DESC;
+
+SELECT max(id)
+FROM public.tb_indiv_subject;
+
+SELECT last_value
+FROM tb_indiv_subject_id_seq;
+
+/*Id seq последовательность
+1-7340, 7597, 7601, 7617, 7618, 7633, 7634, 7644, 64557-65655, 89430, 89431, 89493-89496, 90279-90499*/
+
+---VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV---
+Чинить нет нужды. Плюс каскадное произойдет, лучше не надо.
+---VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV---
+
+12) tb_work_activity_id_seq - последовательность норм, кроме пары строчек, где id совпадает с f_subject_id. Исправляю. sequence не пострадал, хотя есть все же еще пропасшие строчки с tb_work_activity.
+
+SELECT *
+FROM public.tb_work_activity
+WHERE id = f_subject_id
+ORDER BY id DESC;
+/*19 апреля 2021, в 9:38 утра 2 строчки 90474-90473*/
+/*22 декабря 2020 в 11:10 9 строчек 90279-90288*/
+/*11 декабря 2020 в 10:07 4 строчки 89493-89496*/
+/*странные дела...*/
+SELECT id
+FROM public.tb_work_activity
+ORDER BY id DESC;
+
+SELECT last_value
+FROM tb_work_activity_id_seq;
+/*23860*/
+
+ALTER SEQUENCE
+
+SELECT max(id)
+FROM public.tb_work_activity
+WHERE id < 89493;
+
+SELECT id
+FROM public.tb_work_activity
+ORDER BY id DESC;
+
+UPDATE public.tb_work_activity
+SET id = 23866
+WHERE id = 90280;
+
+ALTER SEQUENCE tb_work_activity_id_seq RESTART WITH 105;
+
+---VVVVVVVVVVVVVVVVVVVVVV---
+**********Починил***********
+---VVVVVVVVVVVVVVVVVVVVVV---
+
+13) tb_education
+
+SELECT id, f_subject_id
+FROM public.tb_education
+ORDER BY id DESC;
+
+SELECT max(id)
+FROM public.tb_education;
+/*36023*/
+
+SELECT last_value
+FROM tb_education_id_seq;
+/*36023*/
+
+/*
+Id sequence такой
+1, 34-6568, 13553-13638, 32474-36023
+*/

@@ -1,0 +1,13 @@
+SELECT id, f_subject_id
+FROM public.tb_education
+ORDER BY id DESC;
+
+SELECT max(id)
+FROM public.tb_education;
+/*36023*/
+
+SELECT last_value
+FROM tb_education_id_seq;
+/*36023*/
+
+/*1, 34-6568, 13553-13638, 32474-36023*/

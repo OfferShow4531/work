@@ -1,0 +1,31 @@
+SELECT *
+FROM public.tb_work_activity
+WHERE id = f_subject_id
+ORDER BY id DESC;
+
+/*19 апреля 2021, в 9:38 утра 2 строчки 90474-90473*/
+/*22 декабря 2020 в 11:10 9 строчек 90279-90288*/
+/*11 декабря 2020 в 10:07 4 строчки 89493-89496*/
+/*странные дела...*/
+
+SELECT id
+FROM public.tb_work_activity
+ORDER BY id DESC;
+
+SELECT last_value
+FROM tb_work_activity_id_seq;
+/*23860*/
+
+ALTER SEQUENCE
+
+SELECT max(id)
+FROM public.tb_work_activity
+WHERE id < 89493;
+
+SELECT id
+FROM public.tb_work_activity
+ORDER BY id DESC;
+
+UPDATE public.tb_work_activity
+SET id = 23866
+WHERE id = 90280;

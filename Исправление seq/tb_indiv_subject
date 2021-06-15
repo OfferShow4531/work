@@ -1,0 +1,11 @@
+SELECT id
+FROM public.tb_indiv_subject
+ORDER BY id DESC;
+
+SELECT max(id)
+FROM public.tb_indiv_subject;
+
+SELECT last_value
+FROM tb_indiv_subject_id_seq;
+
+/*1-7340, 7597, 7601, 7617, 7618, 7633, 7634, 7644, 64557-65655, 89430, 89431, 89493-89496, 90279-90499*/
