@@ -1,0 +1,15 @@
+SELECT 
+SUM(f_staff) as pps_staff, SUM(f_freelancer) as pps_freelance, 
+SUM(pps.f_candidates)+SUM(pps.f_phd)+SUM(pps.f_doctorates) as pps_degree,
+SUM(f_bachelor) as stud_bachelor, SUM(f_master) as stud_master, 
+SUM(st.f_doctorates) as stud_doctorates, SUM(f_fired) as stud_fired
+FROM 
+cafedra_report.tb_cafedra_report_pps pps	
+FULL OUTER JOIN 
+cafedra_report.tb_cafedra_report_students st	
+ON
+pps.f_org_division_id = st.f_org_division_id
+	
+	
+	
+
