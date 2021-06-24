@@ -9,7 +9,3 @@ FULL OUTER JOIN
 cafedra_report.tb_cafedra_report_students st	
 ON
 pps.f_org_division_id = st.f_org_division_id
-	
-	
-	
-
