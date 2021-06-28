@@ -441,8 +441,8 @@ self_cit_2015-2020
 отсутствовали в API, но были в трансформации Маралым, чтобы все работало
 я их убрал, но придется вернуть при реальном запуске
 Оригинал трансформации есть в DataCenter</note>
-      <xloc>16</xloc>
-      <yloc>128</yloc>
+      <xloc>384</xloc>
+      <yloc>352</yloc>
       <width>450</width>
       <heigth>90</heigth>
       <fontname>Segoe UI</fontname>
@@ -624,7 +624,7 @@ self_cit_2015-2020
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input 2</from>
+      <from>DictPublicationType</from>
       <to>Sort rows 8</to>
       <enabled>Y</enabled>
     </hop>
@@ -690,7 +690,7 @@ self_cit_2015-2020
     </hop>
     <hop>
       <from>Add sequence</from>
-      <to>Table output</to>
+      <to>tb_treatise out</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -750,17 +750,17 @@ self_cit_2015-2020
     </hop>
     <hop>
       <from>Select values 9</from>
-      <to>Get system info 2</to>
+      <to>add_date</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get system info 2</from>
+      <from>add_date</from>
       <to>Add sequence 2</to>
       <enabled>N</enabled>
     </hop>
     <hop>
       <from>Add sequence 2</from>
-      <to>Table output 2</to>
+      <to>tb_treatise_scopus_wos out</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -855,7 +855,7 @@ self_cit_2015-2020
     </hop>
     <hop>
       <from>Add sequence 3</from>
-      <to>Table output 3</to>
+      <to>tb_journal out</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -1256,7 +1256,7 @@ self_cit_2015-2020
     <hop>
       <from>Топ 50 стран</from>
       <to>Sort rows 42</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Sort rows 41</from>
@@ -1746,8 +1746,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>384</yloc>
+      <xloc>448</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1785,8 +1785,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>16</yloc>
+      <xloc>1568</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1824,8 +1824,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2032</xloc>
-      <yloc>256</yloc>
+      <xloc>2704</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1863,8 +1863,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1488</xloc>
-      <yloc>400</yloc>
+      <xloc>2400</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1902,8 +1902,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1824</xloc>
-      <yloc>448</yloc>
+      <xloc>2736</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1937,8 +1937,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>48</yloc>
+      <xloc>2064</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1972,8 +1972,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2304</xloc>
-      <yloc>256</yloc>
+      <xloc>2976</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2007,8 +2007,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2208</xloc>
-      <yloc>448</yloc>
+      <xloc>3120</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2042,8 +2042,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2288</xloc>
-      <yloc>608</yloc>
+      <xloc>3456</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2077,8 +2077,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2704</xloc>
-      <yloc>896</yloc>
+      <xloc>3648</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2112,8 +2112,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2416</xloc>
-      <yloc>1088</yloc>
+      <xloc>3872</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2147,8 +2147,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2512</xloc>
-      <yloc>1632</yloc>
+      <xloc>5056</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2233,8 +2233,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>176</yloc>
+      <xloc>1776</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2319,8 +2319,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1904</xloc>
-      <yloc>448</yloc>
+      <xloc>2816</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2354,8 +2354,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2304</xloc>
-      <yloc>1088</yloc>
+      <xloc>3792</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2408,8 +2408,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2256</xloc>
-      <yloc>1632</yloc>
+      <xloc>4800</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2443,8 +2443,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1760</xloc>
-      <yloc>896</yloc>
+      <xloc>2656</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2478,8 +2478,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2144</xloc>
-      <yloc>896</yloc>
+      <xloc>3040</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2511,8 +2511,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1712</xloc>
-      <yloc>560</yloc>
+      <xloc>2880</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2544,8 +2544,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2080</xloc>
-      <yloc>1632</yloc>
+      <xloc>4624</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2579,13 +2579,13 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>16</yloc>
+      <xloc>1472</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Get system info 2</name>
+    <name>add_date</name>
     <type>SystemInfo</type>
     <description/>
     <distribute>Y</distribute>
@@ -2610,8 +2610,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2208</xloc>
-      <yloc>256</yloc>
+      <xloc>2880</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2641,8 +2641,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2096</xloc>
-      <yloc>448</yloc>
+      <xloc>3008</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2672,8 +2672,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2176</xloc>
-      <yloc>608</yloc>
+      <xloc>3344</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2703,8 +2703,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2624</xloc>
-      <yloc>896</yloc>
+      <xloc>3568</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2734,8 +2734,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2128</xloc>
-      <yloc>1088</yloc>
+      <xloc>3648</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2765,8 +2765,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2352</xloc>
-      <yloc>1632</yloc>
+      <xloc>4896</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2799,8 +2799,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2080</xloc>
-      <yloc>608</yloc>
+      <xloc>3248</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2922,8 +2922,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>384</yloc>
+      <xloc>960</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2958,8 +2958,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2016</xloc>
-      <yloc>1088</yloc>
+      <xloc>3536</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3003,8 +3003,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1664</xloc>
-      <yloc>1456</yloc>
+      <xloc>4048</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3066,8 +3066,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1504</xloc>
-      <yloc>48</yloc>
+      <xloc>1968</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3126,8 +3126,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>176</yloc>
+      <xloc>1872</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3204,8 +3204,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
-      <yloc>560</yloc>
+      <xloc>2336</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3252,8 +3252,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>208</yloc>
+      <xloc>2112</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3303,8 +3303,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1936</xloc>
-      <yloc>256</yloc>
+      <xloc>2608</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3384,8 +3384,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>400</yloc>
+      <xloc>2320</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3423,8 +3423,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>864</yloc>
+      <xloc>2320</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3459,8 +3459,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>752</yloc>
+      <xloc>1456</xloc>
+      <yloc>1360</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3498,8 +3498,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2432</xloc>
-      <yloc>896</yloc>
+      <xloc>3328</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3532,8 +3532,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>288</yloc>
+      <xloc>1072</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3568,8 +3568,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1664</xloc>
-      <yloc>896</yloc>
+      <xloc>2560</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3604,8 +3604,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2048</xloc>
-      <yloc>896</yloc>
+      <xloc>2944</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3638,8 +3638,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>1088</yloc>
+      <xloc>2768</xloc>
+      <yloc>1520</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3674,8 +3674,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1712</xloc>
-      <yloc>1088</yloc>
+      <xloc>3120</xloc>
+      <yloc>1520</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3714,8 +3714,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>1328</yloc>
+      <xloc>3648</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3750,8 +3750,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1776</xloc>
-      <yloc>1552</yloc>
+      <xloc>4320</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3784,8 +3784,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1984</xloc>
-      <yloc>1632</yloc>
+      <xloc>4528</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3818,8 +3818,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>400</yloc>
+      <xloc>1200</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3852,8 +3852,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>48</yloc>
+      <xloc>1792</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3886,8 +3886,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1360</xloc>
-      <yloc>208</yloc>
+      <xloc>2032</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3922,8 +3922,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>256</yloc>
+      <xloc>2352</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3956,8 +3956,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>400</yloc>
+      <xloc>2064</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3992,8 +3992,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1648</xloc>
-      <yloc>448</yloc>
+      <xloc>2560</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4028,8 +4028,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1888</xloc>
-      <yloc>608</yloc>
+      <xloc>3056</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4064,8 +4064,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>864</yloc>
+      <xloc>1568</xloc>
+      <yloc>1472</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4162,8 +4162,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1296</xloc>
-      <yloc>560</yloc>
+      <xloc>2464</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4345,8 +4345,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>288</yloc>
+      <xloc>448</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4364,18 +4364,23 @@ self_cit_2015-2020
     <fields>
       <field>
         <name>itog_id</name>
+        <rename/>
       </field>
       <field>
         <name>Фамилия</name>
+        <rename/>
       </field>
       <field>
         <name>Имя</name>
+        <rename/>
       </field>
       <field>
         <name>Отчество</name>
+        <rename/>
       </field>
       <field>
         <name>iin</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -4405,8 +4410,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>240</yloc>
+      <xloc>752</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4471,8 +4476,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1232</xloc>
-      <yloc>400</yloc>
+      <xloc>2144</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4530,8 +4535,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1728</xloc>
-      <yloc>448</yloc>
+      <xloc>2640</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4588,8 +4593,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2000</xloc>
-      <yloc>448</yloc>
+      <xloc>2912</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4629,8 +4634,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>560</yloc>
+      <xloc>2576</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4709,8 +4714,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1616</xloc>
-      <yloc>560</yloc>
+      <xloc>2784</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4755,8 +4760,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1984</xloc>
-      <yloc>608</yloc>
+      <xloc>3152</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4832,8 +4837,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1216</xloc>
-      <yloc>864</yloc>
+      <xloc>1680</xloc>
+      <yloc>1472</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4866,8 +4871,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1856</xloc>
-      <yloc>896</yloc>
+      <xloc>2752</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4917,8 +4922,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2240</xloc>
-      <yloc>896</yloc>
+      <xloc>3136</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4970,8 +4975,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>1088</yloc>
+      <xloc>2880</xloc>
+      <yloc>1520</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5139,8 +5144,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>384</yloc>
+      <xloc>752</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5174,8 +5179,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1808</xloc>
-      <yloc>1088</yloc>
+      <xloc>3360</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5250,8 +5255,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>1456</yloc>
+      <xloc>3824</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5294,8 +5299,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1872</xloc>
-      <yloc>1552</yloc>
+      <xloc>4416</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5337,8 +5342,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2176</xloc>
-      <yloc>1632</yloc>
+      <xloc>4720</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5505,8 +5510,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>288</yloc>
+      <xloc>1136</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5548,8 +5553,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>496</yloc>
+      <xloc>1104</xloc>
+      <yloc>720</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5736,8 +5741,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>400</yloc>
+      <xloc>1280</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5805,8 +5810,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>208</yloc>
+      <xloc>2192</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5859,8 +5864,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>304</yloc>
+      <xloc>2192</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5913,8 +5918,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1716</xloc>
-      <yloc>649</yloc>
+      <xloc>2880</xloc>
+      <yloc>1056</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5969,8 +5974,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1760</xloc>
-      <yloc>256</yloc>
+      <xloc>2432</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6021,8 +6026,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2112</xloc>
-      <yloc>256</yloc>
+      <xloc>2784</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6071,8 +6076,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>384</yloc>
+      <xloc>864</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6113,8 +6118,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
-      <yloc>176</yloc>
+      <xloc>1952</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6163,8 +6168,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>208</yloc>
+      <xloc>2272</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6213,8 +6218,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>304</yloc>
+      <xloc>2272</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6263,8 +6268,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1796</xloc>
-      <yloc>649</yloc>
+      <xloc>2960</xloc>
+      <yloc>1056</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6353,8 +6358,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>256</yloc>
+      <xloc>2512</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6395,8 +6400,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>400</yloc>
+      <xloc>1952</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6437,8 +6442,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>480</yloc>
+      <xloc>2064</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6487,8 +6492,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1568</xloc>
-      <yloc>400</yloc>
+      <xloc>2480</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6537,8 +6542,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1568</xloc>
-      <yloc>480</yloc>
+      <xloc>2480</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6651,8 +6656,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>400</yloc>
+      <xloc>2224</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6701,8 +6706,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1792</xloc>
-      <yloc>560</yloc>
+      <xloc>2960</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6775,8 +6780,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>288</yloc>
+      <xloc>864</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6825,8 +6830,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>752</yloc>
+      <xloc>1568</xloc>
+      <yloc>1360</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6875,8 +6880,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>848</yloc>
+      <xloc>448</xloc>
+      <yloc>1472</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6957,8 +6962,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>864</yloc>
+      <xloc>1776</xloc>
+      <yloc>1472</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7007,8 +7012,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>864</yloc>
+      <xloc>2448</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7057,8 +7062,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>944</yloc>
+      <xloc>2560</xloc>
+      <yloc>1312</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7107,8 +7112,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1936</xloc>
-      <yloc>896</yloc>
+      <xloc>2832</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7157,8 +7162,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2048</xloc>
-      <yloc>992</yloc>
+      <xloc>2944</xloc>
+      <yloc>1312</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7207,8 +7212,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2336</xloc>
-      <yloc>896</yloc>
+      <xloc>3232</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7249,8 +7254,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1344</xloc>
-      <yloc>1088</yloc>
+      <xloc>2656</xloc>
+      <yloc>1520</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7395,8 +7400,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>560</yloc>
+      <xloc>2208</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7437,8 +7442,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>288</yloc>
+      <xloc>960</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7479,8 +7484,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>1184</yloc>
+      <xloc>2768</xloc>
+      <yloc>1632</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7537,8 +7542,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1616</xloc>
-      <yloc>1088</yloc>
+      <xloc>2992</xloc>
+      <yloc>1520</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7595,8 +7600,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1712</xloc>
-      <yloc>1184</yloc>
+      <xloc>3120</xloc>
+      <yloc>1632</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7645,8 +7650,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1920</xloc>
-      <yloc>1088</yloc>
+      <xloc>3440</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7687,8 +7692,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2528</xloc>
-      <yloc>896</yloc>
+      <xloc>3424</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7729,8 +7734,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2208</xloc>
-      <yloc>1088</yloc>
+      <xloc>3728</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7795,8 +7800,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>1280</yloc>
+      <xloc>3360</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7861,8 +7866,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1664</xloc>
-      <yloc>1280</yloc>
+      <xloc>3648</xloc>
+      <yloc>1584</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8023,8 +8028,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>1456</yloc>
+      <xloc>3936</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8073,8 +8078,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1776</xloc>
-      <yloc>1456</yloc>
+      <xloc>4160</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8115,8 +8120,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>384</yloc>
+      <xloc>1072</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8165,8 +8170,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1664</xloc>
-      <yloc>1552</yloc>
+      <xloc>4320</xloc>
+      <yloc>1696</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8207,8 +8212,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1984</xloc>
-      <yloc>1552</yloc>
+      <xloc>4528</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8249,8 +8254,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1872</xloc>
-      <yloc>1632</yloc>
+      <xloc>4416</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8291,8 +8296,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2432</xloc>
-      <yloc>1632</yloc>
+      <xloc>4976</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8333,8 +8338,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>288</yloc>
+      <xloc>1200</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8375,8 +8380,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>496</yloc>
+      <xloc>1200</xloc>
+      <yloc>720</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8417,8 +8422,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>16</yloc>
+      <xloc>1664</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8459,8 +8464,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>96</yloc>
+      <xloc>1664</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8501,8 +8506,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>256</yloc>
+      <xloc>1936</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8655,8 +8660,8 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>48</yloc>
+      <xloc>1872</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8708,13 +8713,13 @@ self_cit_2015-2020
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1504</xloc>
-      <yloc>560</yloc>
+      <xloc>2672</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table input 2</name>
+    <name>DictPublicationType</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -8746,8 +8751,8 @@ where dtype='DictPublicationType'</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>96</yloc>
+      <xloc>1568</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8783,8 +8788,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1604</xloc>
-      <yloc>649</yloc>
+      <xloc>2768</xloc>
+      <yloc>1056</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8820,13 +8825,13 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>480</yloc>
+      <xloc>2352</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>tb_treatise out</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -8908,13 +8913,13 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1680</xloc>
-      <yloc>48</yloc>
+      <xloc>2144</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output 2</name>
+    <name>tb_treatise_scopus_wos out</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -8992,13 +8997,13 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2400</xloc>
-      <yloc>256</yloc>
+      <xloc>3120</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output 3</name>
+    <name>tb_journal out</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -9084,8 +9089,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2304</xloc>
-      <yloc>448</yloc>
+      <xloc>3216</xloc>
+      <yloc>800</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9152,8 +9157,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2432</xloc>
-      <yloc>608</yloc>
+      <xloc>3600</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9212,8 +9217,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2784</xloc>
-      <yloc>896</yloc>
+      <xloc>3744</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9272,8 +9277,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2544</xloc>
-      <yloc>1088</yloc>
+      <xloc>3968</xloc>
+      <yloc>1424</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9344,8 +9349,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2592</xloc>
-      <yloc>1632</yloc>
+      <xloc>5136</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9382,8 +9387,8 @@ FROM "public".tb_co_author
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1552</xloc>
-      <yloc>1552</yloc>
+      <xloc>4160</xloc>
+      <yloc>1696</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9577,8 +9582,8 @@ FROM "public".tb_co_author
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>480</yloc>
+      <xloc>1952</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9615,8 +9620,8 @@ where dtype='DictPublicationType'</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
-      <yloc>256</yloc>
+      <xloc>1840</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9660,8 +9665,8 @@ where dtype='DictPublicationType'</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1216</xloc>
-      <yloc>1088</yloc>
+      <xloc>2544</xloc>
+      <yloc>1520</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9720,8 +9725,8 @@ where f_iin is not null and f_iin&lt;&gt;''
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>496</yloc>
+      <xloc>1008</xloc>
+      <yloc>720</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9772,8 +9777,8 @@ where f_iin is not null and f_iin&lt;&gt;''
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>1264</yloc>
+      <xloc>2560</xloc>
+      <yloc>1808</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9809,8 +9814,8 @@ where f_iin is not null and f_iin&lt;&gt;''
       </output>
     </remotesteps>
     <GUI>
-      <xloc>944</xloc>
-      <yloc>400</yloc>
+      <xloc>1856</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9846,8 +9851,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>944</yloc>
+      <xloc>2448</xloc>
+      <yloc>1312</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9882,8 +9887,8 @@ FROM tb_treatise</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1616</xloc>
-      <yloc>1184</yloc>
+      <xloc>2992</xloc>
+      <yloc>1632</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9916,8 +9921,8 @@ FROM tb_treatise</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>752</yloc>
+      <xloc>1280</xloc>
+      <yloc>1360</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9952,8 +9957,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>1184</yloc>
+      <xloc>2656</xloc>
+      <yloc>1632</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9990,8 +9995,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1936</xloc>
-      <yloc>992</yloc>
+      <xloc>2832</xloc>
+      <yloc>1312</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10320,8 +10325,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>560</yloc>
+      <xloc>2096</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10376,8 +10381,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>176</yloc>
+      <xloc>1664</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10435,8 +10440,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>16</yloc>
+      <xloc>1280</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10472,8 +10477,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>304</yloc>
+      <xloc>2080</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11772,8 +11777,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>352</yloc>
+      <xloc>640</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11876,8 +11881,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1776</xloc>
-      <yloc>1632</yloc>
+      <xloc>4320</xloc>
+      <yloc>1888</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11928,8 +11933,8 @@ FROM tb_treatise
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1808</xloc>
-      <yloc>1280</yloc>
+      <xloc>3360</xloc>
+      <yloc>1584</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
