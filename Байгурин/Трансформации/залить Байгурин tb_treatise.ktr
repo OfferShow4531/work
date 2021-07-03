@@ -608,7 +608,7 @@ not automated</note>
     </hop>
     <hop>
       <from>Add sequence</from>
-      <to>Table output</to>
+      <to>tb_treatise output</to>
       <enabled>N</enabled>
     </hop>
     <hop>
@@ -1795,7 +1795,7 @@ not automated</note>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>tb_treatise output</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>

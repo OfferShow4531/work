@@ -1,8 +1,0 @@
-Порядок загрузки данных:
-1) tb_treatise;
-2) tb_treatise_scopus_wos;
-3) tb_journal;
-4) tb_treatise_citation;
-5) tb_treatise_authors;
-6) tb_co_authors;
-7) tb_int_coauth.
