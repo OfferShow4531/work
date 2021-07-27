@@ -436,8 +436,8 @@
   <notepads>
     <notepad>
       <note>ИИНки</note>
-      <xloc>1232</xloc>
-      <yloc>320</yloc>
+      <xloc>1152</xloc>
+      <yloc>1136</yloc>
       <width>50</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -457,8 +457,8 @@
     </notepad>
     <notepad>
       <note>subject_id</note>
-      <xloc>1584</xloc>
-      <yloc>320</yloc>
+      <xloc>1504</xloc>
+      <yloc>1136</yloc>
       <width>64</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -479,8 +479,8 @@
     <notepad>
       <note>same typeCasting is important
 ELSE SOME ROWS WILL LOST</note>
-      <xloc>1008</xloc>
-      <yloc>160</yloc>
+      <xloc>928</xloc>
+      <yloc>976</yloc>
       <width>172</width>
       <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
@@ -501,8 +501,8 @@ ELSE SOME ROWS WILL LOST</note>
     <notepad>
       <note>correct format is # 
 for (author_id to String) conversion</note>
-      <xloc>2400</xloc>
-      <yloc>464</yloc>
+      <xloc>2320</xloc>
+      <yloc>1280</yloc>
       <width>195</width>
       <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
@@ -523,8 +523,8 @@ for (author_id to String) conversion</note>
     <notepad>
       <note>wtf to do with this LO
 or it should be INNER?</note>
-      <xloc>4656</xloc>
-      <yloc>464</yloc>
+      <xloc>4576</xloc>
+      <yloc>1280</yloc>
       <width>129</width>
       <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
@@ -543,30 +543,9 @@ or it should be INNER?</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>should remove btw</note>
-      <xloc>5296</xloc>
-      <yloc>304</yloc>
-      <width>112</width>
-      <heigth>26</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>205</backgroundcolorgreen>
-      <backgroundcolorblue>112</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
       <note>некоторые поменяли топ 50, и теперь там находятся</note>
-      <xloc>5712</xloc>
-      <yloc>560</yloc>
+      <xloc>5664</xloc>
+      <yloc>1376</yloc>
       <width>300</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -584,16 +563,84 @@ or it should be INNER?</note>
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>WoS</note>
+      <xloc>336</xloc>
+      <yloc>352</yloc>
+      <width>35</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>ahahah
+wtf
+why</note>
+      <xloc>4448</xloc>
+      <yloc>1264</yloc>
+      <width>49</width>
+      <heigth>58</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>seems like some people
+just disappeared from
+tb_co_author
+for some reason...</note>
+      <xloc>5456</xloc>
+      <yloc>1456</yloc>
+      <width>136</width>
+      <heigth>74</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
-    <name>postgres</name>
-    <server>192.168.12.42</server>
+    <name>postgresCopy</name>
+    <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>politeh</database>
+    <database>postgresCopy</database>
     <port>5432</port>
-    <username>politeh_backend</username>
-    <password>Encrypted 488cfaf0a226cd8b8fbd4d9b53f095f8ea</password>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -643,6 +690,36 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>API_and_SU_docs_cit_2015_2021_20210614 2</from>
+      <to>title, eid 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Country</from>
+      <to>LO f_country</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>IF Rank IS NULL - 0; 1</from>
+      <to>select 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>INNER</from>
+      <to>auid to String</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>INNER 2</from>
+      <to>rename</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>INNER 3</from>
+      <to>select</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>INNER f_iin-iin</from>
       <to>middle select</to>
       <enabled>Y</enabled>
@@ -653,9 +730,34 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>LO f_country</from>
+      <to>IF Rank IS NULL - 0; 1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>LO f_s_id, id</from>
+      <to>id_1, uni, city, country</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>LO title_1, date</from>
+      <to>данные с tb_co_author</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Scopus ID(с official+Данияр)</from>
       <to>itog_id to Integer</to>
       <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Merge join</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows 2</from>
+      <to>Merge join</to>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>all column group by</from>
@@ -668,13 +770,48 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>auid 2</from>
+      <to>INNER 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>auid to Integer</from>
       <to>auid</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>auid to String</from>
+      <to>sort</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>auid to String</from>
+      <to>tb_int_coauth</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>auid, author_name</from>
       <to>all column group by</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_author_id</from>
+      <to>INNER 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_author_id to String</from>
+      <to>f_author_id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_coauthor_id</from>
+      <to>seq</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_country</from>
+      <to>LO f_country</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -688,8 +825,43 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>f_o_n, f_city, f_country ALL NULL</from>
+      <to>add_date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_s_id, f_t_id</from>
+      <to>LO f_s_id, id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_s_id, id</from>
+      <to>LO f_s_id, id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_s_id, id, uni, city, country</from>
+      <to>f_s_id, id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_t_n, f_i_y, auid, a_n</from>
+      <to>INNER 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>f_treatise_name, f_doi_treatise, f_issue_year</from>
+      <to>LO title_1, date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>iin 2</from>
       <to>INNER f_iin-iin</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>iin to String</from>
+      <to>iin 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -703,38 +875,88 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>tb_indiv_subject</from>
-      <to>f_iin to String</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Аффилированность СУ</from>
-      <to>auid, author_name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>iin to String</from>
-      <to>iin 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>middle select</from>
       <to>tb_co_author</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>rename</from>
+      <to>title_1, doi, date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>select</from>
+      <to>sort 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>select 2</from>
+      <to>f_o_n, f_city, f_country ALL NULL</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>seq</from>
+      <to>Sort rows 2</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>seq</from>
+      <to>tb_int_coauth 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>sort 2</from>
+      <to>f_s_id, id, uni, city, country</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>t_1, date, auid, a_n</from>
+      <to>INNER 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_co_author</from>
+      <to>title, eid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_co_author 2</from>
+      <to>auid 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_co_author 3</from>
+      <to>f_s_id, f_t_id</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_indiv_subject</from>
+      <to>f_iin to String</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_int_coauth</from>
+      <to>t_1, date, auid, a_n</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_int_coauth 3</from>
+      <to>Sort rows</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>tb_treatise  2</from>
+      <to>f_treatise_name, f_doi_treatise, f_issue_year</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tb_treatise_authors </from>
+      <to>f_author_id to String</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>title, eid</from>
       <to>title, eid 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>INNER</from>
-      <to>auid to String</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>auid to String</from>
-      <to>sort</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -748,128 +970,13 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>tb_co_author</from>
-      <to>title, eid</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>API_and_SU_docs_cit_2015_2021_20210614 2</from>
-      <to>title, eid 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>INNER 2</from>
-      <to>rename</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>rename</from>
-      <to>title_1, doi, date</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>auid 2</from>
-      <to>INNER 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>title_1, doi, date</from>
       <to>LO title_1, date</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>f_treatise_name, f_doi_treatise, f_issue_year</from>
-      <to>LO title_1, date</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>tb_treatise  2</from>
-      <to>f_treatise_name, f_doi_treatise, f_issue_year</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>sort</from>
-      <to>tb_co_author 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>t_1, date, auid, a_n</from>
-      <to>INNER 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_t_n, f_i_y, auid, a_n</from>
-      <to>INNER 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>tb_int_coauth</from>
-      <to>t_1, date, auid, a_n</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>данные с tb_co_author</from>
-      <to>f_t_n, f_i_y, auid, a_n</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>auid to String</from>
-      <to>tb_int_coauth</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>LO title_1, date</from>
-      <to>данные с tb_co_author</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_author_id</from>
-      <to>INNER 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>tb_treatise_authors </from>
-      <to>f_author_id to String</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_author_id to String</from>
-      <to>f_author_id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>tb_co_author 2</from>
-      <to>auid 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>seq</from>
-      <to>tb_int_coauth 2</to>
-      <enabled>N</enabled>
-    </hop>
-    <hop>
-      <from>f_o_n, f_city, f_country ALL NULL</from>
-      <to>add_date</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>IF Rank IS NULL - 0; 1</from>
-      <to>select 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_s_id, id, uni, city, country</from>
-      <to>f_s_id, id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>LO f_s_id, id</from>
-      <to>id_1, uni, city, country</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>LO f_country</from>
-      <to>IF Rank IS NULL - 0; 1</to>
+      <from>Аффилированность СУ</from>
+      <to>auid, author_name</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -878,88 +985,28 @@ or it should be INNER?</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>select</from>
-      <to>sort 2</to>
+      <from>данные с tb_co_author</from>
+      <to>f_t_n, f_i_y, auid, a_n</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>id_1, uni, city, country</from>
+      <to>ц to ö</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ц to ö</from>
       <to>f_country</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>select 2</from>
-      <to>f_o_n, f_city, f_country ALL NULL</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>sort 2</from>
-      <to>f_s_id, id, uni, city, country</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_s_id, id</from>
-      <to>LO f_s_id, id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_s_id, f_t_id</from>
-      <to>LO f_s_id, id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_country</from>
-      <to>LO f_country</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Country</from>
-      <to>LO f_country</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>f_coauthor_id</from>
-      <to>seq</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>tb_co_author 3</from>
-      <to>f_s_id, f_t_id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>INNER 3</from>
-      <to>select</to>
+      <from>sort</from>
+      <to>tb_co_author 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>add_date</from>
-      <to>unknown step</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>unknown step</from>
       <to>f_coauthor_id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>seq</from>
-      <to>Sort rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>tb_int_coauth 3</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows</from>
-      <to>Merge join</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 2</from>
-      <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1429,8 +1476,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>384</yloc>
+      <xloc>336</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1900,8 +1947,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2080</xloc>
-      <yloc>256</yloc>
+      <xloc>2000</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1942,8 +1989,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4704</xloc>
-      <yloc>272</yloc>
+      <xloc>4624</xloc>
+      <yloc>1088</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1975,8 +2022,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4816</xloc>
-      <yloc>384</yloc>
+      <xloc>4736</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2011,8 +2058,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2320</xloc>
-      <yloc>384</yloc>
+      <xloc>2240</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2045,8 +2092,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2896</xloc>
-      <yloc>288</yloc>
+      <xloc>2816</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2085,8 +2132,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3584</xloc>
-      <yloc>384</yloc>
+      <xloc>3504</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2119,8 +2166,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1696</xloc>
-      <yloc>384</yloc>
+      <xloc>1616</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2153,8 +2200,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>384</yloc>
+      <xloc>1248</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2187,8 +2234,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4704</xloc>
-      <yloc>384</yloc>
+      <xloc>4624</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2223,8 +2270,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4320</xloc>
-      <yloc>384</yloc>
+      <xloc>4240</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2259,8 +2306,48 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3248</xloc>
-      <yloc>288</yloc>
+      <xloc>3168</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>FULL OUTER</join_type>
+    <step1>Sort rows 2</step1>
+    <step2>Sort rows</step2>
+    <keys_1>
+      <key>f_coauthor_id</key>
+      <key>f_organization_name</key>
+      <key>f_city</key>
+      <key>f_country</key>
+    </keys_1>
+    <keys_2>
+      <key>f_coauthor_id</key>
+      <key>f_organization_name</key>
+      <key>f_city</key>
+      <key>f_country</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>5584</xloc>
+      <yloc>1376</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2447,8 +2534,156 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>256</yloc>
+      <xloc>336</xloc>
+      <yloc>1072</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>f_coauthor_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_organization_name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_city</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_country</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_in_top50</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>5488</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>f_coauthor_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_organization_name</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_city</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_country</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>f_in_top50</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>5488</xloc>
+      <yloc>1296</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2478,8 +2713,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>5264</xloc>
-      <yloc>384</yloc>
+      <xloc>5184</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2607,8 +2842,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>384</yloc>
+      <xloc>832</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2649,8 +2884,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1216</xloc>
-      <yloc>384</yloc>
+      <xloc>1136</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2691,8 +2926,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2768</xloc>
-      <yloc>288</yloc>
+      <xloc>2688</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3073,8 +3308,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1072</xloc>
-      <yloc>384</yloc>
+      <xloc>992</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3142,8 +3377,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2432</xloc>
-      <yloc>384</yloc>
+      <xloc>2352</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3192,8 +3427,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>384</yloc>
+      <xloc>704</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3234,8 +3469,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2896</xloc>
-      <yloc>160</yloc>
+      <xloc>2816</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3288,8 +3523,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2768</xloc>
-      <yloc>160</yloc>
+      <xloc>2688</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3330,8 +3565,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>5456</xloc>
-      <yloc>384</yloc>
+      <xloc>5376</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3372,8 +3607,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4560</xloc>
-      <yloc>384</yloc>
+      <xloc>4544</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3414,8 +3649,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1696</xloc>
-      <yloc>256</yloc>
+      <xloc>1616</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3507,8 +3742,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>256</yloc>
+      <xloc>1520</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3561,8 +3796,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>5104</xloc>
-      <yloc>384</yloc>
+      <xloc>5024</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3611,8 +3846,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4320</xloc>
-      <yloc>272</yloc>
+      <xloc>4240</xloc>
+      <yloc>1088</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3661,8 +3896,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4192</xloc>
-      <yloc>384</yloc>
+      <xloc>4112</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3706,8 +3941,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4064</xloc>
-      <yloc>384</yloc>
+      <xloc>3984</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3772,8 +4007,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3584</xloc>
-      <yloc>288</yloc>
+      <xloc>3504</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3830,8 +4065,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3248</xloc>
-      <yloc>160</yloc>
+      <xloc>3168</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3874,8 +4109,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4432</xloc>
-      <yloc>384</yloc>
+      <xloc>4352</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3916,8 +4151,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>384</yloc>
+      <xloc>1520</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4087,8 +4322,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1472</xloc>
-      <yloc>384</yloc>
+      <xloc>1392</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4129,8 +4364,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>256</yloc>
+      <xloc>1248</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4201,8 +4436,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1072</xloc>
-      <yloc>256</yloc>
+      <xloc>992</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4355,8 +4590,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1792</xloc>
-      <yloc>384</yloc>
+      <xloc>1712</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4408,8 +4643,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2992</xloc>
-      <yloc>288</yloc>
+      <xloc>2912</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4484,8 +4719,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3776</xloc>
-      <yloc>384</yloc>
+      <xloc>3696</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4527,8 +4762,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4960</xloc>
-      <yloc>384</yloc>
+      <xloc>4880</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4544,11 +4779,11 @@ or it should be INNER?</note>
       <schema_name/>
     </partitioning>
     <valuename>value</valuename>
-    <use_database>N</use_database>
-    <connection>postgres</connection>
+    <use_database>Y</use_database>
+    <connection>postgresCopy</connection>
     <schema>public</schema>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
+    <seqname>tb_int_coauth_id_seq</seqname>
+    <use_counter>N</use_counter>
     <counter_name/>
     <start_at>1</start_at>
     <increment_by>1</increment_by>
@@ -4562,8 +4797,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>5568</xloc>
-      <yloc>384</yloc>
+      <xloc>5488</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4644,8 +4879,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2432</xloc>
-      <yloc>288</yloc>
+      <xloc>2352</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4806,8 +5041,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3904</xloc>
-      <yloc>384</yloc>
+      <xloc>3824</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4872,8 +5107,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3216</xloc>
-      <yloc>384</yloc>
+      <xloc>3136</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4906,8 +5141,8 @@ or it should be INNER?</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1952</xloc>
-      <yloc>384</yloc>
+      <xloc>1856</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4952,7 +5187,7 @@ or it should be INNER?</note>
     </remotesteps>
     <GUI>
       <xloc>2576</xloc>
-      <yloc>288</yloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4967,7 +5202,7 @@ or it should be INNER?</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>postgres</connection>
+    <connection>postgresCopy</connection>
     <sql>SELECT
   id
 , add_date
@@ -4989,8 +5224,8 @@ FROM "public".tb_co_author
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4192</xloc>
-      <yloc>272</yloc>
+      <xloc>4112</xloc>
+      <yloc>1088</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5005,7 +5240,7 @@ FROM "public".tb_co_author
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>postgres</connection>
+    <connection>postgresCopy</connection>
     <sql>SELECT
   id
 , add_date
@@ -5048,8 +5283,8 @@ FROM "public".tb_indiv_subject
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1472</xloc>
-      <yloc>256</yloc>
+      <xloc>1392</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5100,8 +5335,8 @@ FROM "public".tb_indiv_subject
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3072</xloc>
-      <yloc>384</yloc>
+      <xloc>2992</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5116,7 +5351,7 @@ FROM "public".tb_indiv_subject
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>postgres</connection>
+    <connection>postgresCopy</connection>
     <schema>public</schema>
     <table>tb_int_coauth</table>
     <commit>1000</commit>
@@ -5172,8 +5407,49 @@ FROM "public".tb_indiv_subject
       </output>
     </remotesteps>
     <GUI>
-      <xloc>5696</xloc>
-      <yloc>384</yloc>
+      <xloc>5616</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tb_int_coauth 3</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>postgresCopy</connection>
+    <sql>SELECT
+  id
+, add_date
+, f_coauthor_id
+, f_organization_name
+, f_city
+, f_country
+, f_in_top50
+FROM "public".tb_int_coauth
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>5376</xloc>
+      <yloc>1376</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5188,7 +5464,7 @@ FROM "public".tb_indiv_subject
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>postgres</connection>
+    <connection>postgresCopy</connection>
     <sql>SELECT
   id
 , f_treatise_name
@@ -5208,8 +5484,8 @@ FROM tb_treatise</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3088</xloc>
-      <yloc>160</yloc>
+      <xloc>3008</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5224,7 +5500,7 @@ FROM tb_treatise</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>postgres</connection>
+    <connection>postgresCopy</connection>
     <sql>SELECT
 id, f_author_name
 , f_author_id
@@ -5244,8 +5520,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2640</xloc>
-      <yloc>160</yloc>
+      <xloc>2560</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5280,8 +5556,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2080</xloc>
-      <yloc>384</yloc>
+      <xloc>2000</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5330,8 +5606,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2192</xloc>
-      <yloc>384</yloc>
+      <xloc>2112</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5380,8 +5656,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2320</xloc>
-      <yloc>256</yloc>
+      <xloc>2240</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5438,43 +5714,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3088</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>unknown step</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to/>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <leftvalue>f_coauthor_id</leftvalue>
-        <function>IS NOT NULL</function>
-        <rightvalue/>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>5360</xloc>
-      <yloc>384</yloc>
+      <xloc>3008</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6773,8 +7014,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>384</yloc>
+      <xloc>560</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6956,8 +7197,8 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>4560</xloc>
-      <yloc>272</yloc>
+      <xloc>4480</xloc>
+      <yloc>1088</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7008,14 +7249,14 @@ FROM tb_treatise_authors
       </output>
     </remotesteps>
     <GUI>
-      <xloc>3408</xloc>
-      <yloc>288</yloc>
+      <xloc>3328</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>tb_int_coauth 3</name>
-    <type>TableInput</type>
+    <name>ц to ö</name>
+    <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -7024,94 +7265,18 @@ FROM tb_treatise_authors
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>postgres</connection>
-    <sql>SELECT
-  id
-, add_date
-, f_coauthor_id
-, f_organization_name
-, f_city
-, f_country
-, f_in_top50
-FROM "public".tb_int_coauth
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>5456</xloc>
-      <yloc>560</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>f_coauthor_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_organization_name</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_city</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_country</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_in_top50</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
+        <in_stream_name>f_city</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>Kцthen</replace_string>
+        <replace_by_string>Köthen</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
     </fields>
     <attributes/>
@@ -7123,124 +7288,8 @@ FROM "public".tb_int_coauth
       </output>
     </remotesteps>
     <GUI>
-      <xloc>5568</xloc>
-      <yloc>560</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort rows 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>f_coauthor_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_organization_name</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_city</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_country</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>f_in_top50</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>5568</xloc>
-      <yloc>480</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Merge join</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>FULL OUTER</join_type>
-    <step1>Sort rows 2</step1>
-    <step2>Sort rows</step2>
-    <keys_1>
-      <key>f_coauthor_id</key>
-      <key>f_organization_name</key>
-      <key>f_city</key>
-      <key>f_country</key>
-      <key>f_in_top50</key>
-    </keys_1>
-    <keys_2>
-      <key>f_coauthor_id</key>
-      <key>f_organization_name</key>
-      <key>f_city</key>
-      <key>f_country</key>
-      <key>f_in_top50</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>5664</xloc>
-      <yloc>560</yloc>
+      <xloc>4464</xloc>
+      <yloc>1200</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
